@@ -3,76 +3,90 @@
     padding: 0;
 }
 
-
+/* Media for Smartphones and small devices  */
 
 @media only screen and (max-width: 410px){
     body{
-            background-color: red;
-            font-size: 1.2em;
-            line-height: 1.5em;  
-            text-align: justify;
+        background-color: red;
+        font-size: 1.2em;
+        line-height: 1.5em;  
+        display: flex; 
+        flex-direction :column;     
+    }
+    
+
+    div{
+        padding:20px 15px;
     }
 
     h1{
+        font-size: 1.5em;
         text-align: center;
     }
 
-    #medium{
-        display:none;
+    p{
+        text-align: justify;
     }
-
-    #large{
-        display:none;
-    }
-
+   
 }
 
+/* Media for medium screen laptop   */
 
 @media screen and (min-width: 410px) and (max-width: 768px){
     body{   
-            background-color: green;
-            font-size: 1.4em;
-            line-height: 1.5em;  
-            text-align: justify;
-        }
+        background-color: green;
+        font-size: 1.4em;
+        line-height: 1.5em;  
+        text-align: justify;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        h1{
-            text-align: center;
-        }
-    
+    p{
+        padding:10px 15px;
+    }
+         
+    h1{
+        padding:20px 0;
+        text-align: center;
+    }
       
-        #small{
-            display:none;
-        }
-    
-        #large{
-            display:none;
-        }
-        
-}
-
-
-@media only screen and (min-width: 768px){
-    
-    body{
-            
-            background-color: blue;
-            font-size: 1.6em;
-            text-align: justify;
-
-        }
-
-        h1{
-            text-align: center;
-        }
-    
-          
     #small{
-        display:none;
+        flex-basis: calc((100%/3)*2);
     }
 
     #medium{
-        display:none;
+        flex-basis: calc(100%/3);
     }
-} 
+    
+    #large{  
+        flex-basis:100%;
+    }       
+}
+
+
+/* Media for larger screen laptop  */
+
+@media only screen and (min-width: 768px){
+    
+    body{ 
+        background-color: blue;
+        font-size: 1.6em;
+        text-align: justify;
+        display: flex;
+    }
+
+    h1{
+        padding:20px 0;
+        text-align: center;
+    }
+          
+    p{
+        padding: 10px 15px;
+    }
+
+}
+    
+
+
 
